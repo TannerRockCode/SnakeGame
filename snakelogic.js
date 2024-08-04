@@ -1,9 +1,3 @@
-// const beginGameButton = document.getElementById("beginGameBtn");
-
-// if (beginGameButton) {
-//   beginGameButton.addEventListener("click", beginGame);
-// }
-
 let directionY = 0;
 let directionX = 1;
 let snakeX = 0;
@@ -14,7 +8,6 @@ beginGameButton.addEventListener("click", beginGame);
 
 function beginGame() {
   let gameOver = false;
-  //console.log("button pressed");
   document.getElementById("beginGameBtn").innerHTML = "End Game";
   document.getElementById("gameMap").style.backgroundColor = "Yellow";
 
@@ -58,11 +51,6 @@ function beginGame() {
       directionY = 0;
       directionX = 1;
     }
-    //console.log(keyPressed);
-    //console.log("keyDown EVENT DirectionX:");
-    //console.log(directionX);
-    //console.log("keyDown EVENT DirectionY:");
-    //console.log(directionY);
   });
 
   function update() {
@@ -73,47 +61,21 @@ function beginGame() {
     context.fillStyle = "Purple";
     context.fillRect(199, 220, 5, 5);
 
-    //console.log("DirectionX:");
-    //console.log(directionX);
-    //console.log("DirectionY:");
-    //console.log(directionY);
-
-    //let snakeHead = snake[0];
-    //directionX = 1;
-
     context.fillStyle = "Green";
     let snakeHead = snake[0];
     snakeDirectionX = snakeHead.x;
     snakeDirectionY = snakeHead.y;
     snakeDirectionX += directionX * 5;
     snakeDirectionY += directionY * 5;
-    console.log("directionY: ");
-    console.log(directionY);
-    console.log("SnakeHeadY");
-    console.log(snakeHead.y);
-    console.log("SnakeHeadY + DirectionY:");
-    console.log(snakeDirectionY);
-    //console.log("SnakeX:");
-    //console.log(snakeX);
-    //console.log("SnakeY:");
-    //console.log(snakeY);
 
     snake.unshift({ x: snakeDirectionX, y: snakeDirectionY });
     snake.pop();
 
-    //console.log(snake[3].x);
-
     for (let i = 0; i < snake.length; i++) {
-      //console.log("Snake X:");
-      //console.log(snake[i].x);
-      //console.log("Snake Y:");
-      //console.log(snake[i].y);
       context.fillRect(snake[i].x, snake[i].y, 5, 5);
     }
 
     if (GameOverCheck(snake)) GameOver(context);
-
-    //context.fillRect(snakeX, snakeY, 5, 5);
   }
 
   function GameOverCheck(snake) {
@@ -126,11 +88,4 @@ function beginGame() {
     context.fillStyle = "Black";
     context.fillRect(0, 0, gameMap.height, gameMap.width);
   }
-
-  //generateSnakeFood();
 }
-
-// function generateSnakeFood() {
-//   foodBlockX = 100;
-//   foodBlockY = 125;
-// }
