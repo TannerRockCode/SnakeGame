@@ -11,8 +11,21 @@ body {
   color: white;
 }
 
-#gameMap {
-  background-color: red;
+#game-map {
+  background-color: lightblue;
+  display: flex;
   height: 500px;
   width: 500px;
+}
+
+.snake {
+  background-color: darkorange;
+  width: 5px;
+  height: 5px;
+}
+
+.testElement {
+  background-color: darkorange;
+  width: 5px;
+  height: 5px;
 }
