@@ -4,15 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
-
+    <script src="script.js" defer></script>
     <title>Snake Game</title>
   </head>
   <body>
-    <div class="gameName">
-      <h1>The Snake Game</h1>
+    <div class="environment">
+      <div class="interact">
+        <div class="arrow-buttons">
+          <div class="up-down-arrow-buttons up-arrow-buttons">
+            <div id="up-button" class="arrow-button"></div>
+          </div>
+          <div class="side-arrow-buttons">
+            <div id="left-button" class="side-arrow-button"></div>
+            <div id="right-button" class="side-arrow-button"></div>
+          </div>
+          <div class="up-down-arrow-buttons down-arrow-buttons">
+            <div id="down-button" class="arrow-button"></div>
+          </div>
+        </div>
+        <div id="game-map">
+          <div class="item1"></div>
+        </div>
+        <div class="game-controls">
+          <div class="control-buttons">
+            <div class="up-down-buttons">
+              <div id="a-button" class="control-button"></div>
+            </div>
+            <div class="side-buttons">
+              <div id="b-button" class="control-button"></div>
+              <div id="c-button" class="control-button"></div>
+            </div>
+            <div class="down-buttons">
+              <div id="d-button" class="control-button"></div>
+            </div>
+          </div>
+          <div class="start-setting-buttons">
+            <div id="start-button"></div>
+            <div id="settings-button"></div>
+          </div>
+        </div>
+      </div>
     </div>
-    <div id="game-map"></div>
-    <button id="beginGameBtn">Begin Game</button>
-    <script src="script.js"></script>
   </body>
 </html>

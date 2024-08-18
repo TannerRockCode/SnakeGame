@@ -1,31 +1,166 @@
+html,
 body {
-  display: flex;
-  background-color: blue;
-  flex-direction: column;
-  flex-wrap: wrap;
+  height: 100%;
+  margin: 0px;
 }
 
-.gameName {
-  background-color: green;
-  text-align: center;
-  color: white;
+.environment {
+  display: flex;
+  height: 100vh;
+  width: 100%;
+  background-color: lightblue;
+  align-items: center;
+  justify-content: center;
+}
+
+.interact {
+  height: 820px;
+  width: 1700px;
+  background-color: aqua;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  border-radius: 200px;
+  box-shadow: 4px 4px 2px rgb(0, 240, 240), -2px -4px 0.1em rgb(0, 240, 240);
+}
+
+.arrow-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 500px;
+  width: 315px;
+  margin-right: 40px;
+}
+
+.arrow-button {
+  height: 115px;
+  width: 80px;
+  background-color: lightgray;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0.5px gray, inset -0.5px -1px 0.1em gray;
+}
+
+.up-down-arrow-buttons {
+  display: flex;
+  justify-content: center;
+  height: 33.3%;
+  width: 100%;
+}
+
+.up-arrow-buttons {
+  align-items: end;
+}
+
+.down-arrow-buttons {
+  align-items: start;
+}
+
+.side-arrow-buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  height: 23.3%;
+  width: 100%;
+}
+
+.side-arrow-button {
+  height: 80px;
+  width: 105px;
+  background-color: lightgray;
+  border-radius: 15px;
+  box-shadow: 2px 2px 0.5px gray, inset -0.5px -1px 0.1em gray;
+}
+
+#up-button {
+}
+
+#left-button {
+}
+
+#right-button {
+}
+
+#down-button {
 }
 
 #game-map {
-  background-color: lightblue;
-  display: flex;
-  height: 500px;
-  width: 500px;
+  display: grid;
+  /* grid-auto-columns: 10px;
+  grid-auto-rows: 10px; */
+  grid-template-columns: repeat(90, 10px);
+  grid-template-rows: repeat(75, 10px);
+  height: 750px;
+  width: 900px;
+  background-color: lightcoral;
+  box-shadow: inset 4px 4px 4px darkblue, inset -1.5px -1.5px 0.5em darkblue;
 }
+
+.game-controls {
+  display: flex;
+  flex-direction: column;
+  height: 500px;
+  width: 315px;
+  margin-left: 40px;
+}
+
+.control-buttons {
+  display: flex;
+  flex-direction: column;
+  height: 375px;
+}
+
+.control-button {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  background-color: lightgray;
+  box-shadow: 2px 2px 0.5px gray, inset -0.5px -1px 0.1em gray;
+}
+
+.up-down-buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 33.3%;
+}
+
+#a-button {
+}
+
+.side-buttons {
+  display: flex;
+  flex-direction: row;
+  height: 33.3%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#b-button {
+}
+
+#c-button {
+}
+
+.down-buttons {
+  display: flex;
+  height: 33.3%;
+  justify-content: center;
+  align-items: center;
+}
+
+#d-button {
+}
+
+/* .item1 {
+  grid-column-start: 1;
+  grid-row-start: 1;
+  grid-row-end: 15;
+  background-color: white;
+} */
 
 .snake {
-  background-color: darkorange;
-  width: 5px;
-  height: 5px;
-}
-
-.testElement {
-  background-color: darkorange;
-  width: 5px;
-  height: 5px;
+  background-color: white;
 }
